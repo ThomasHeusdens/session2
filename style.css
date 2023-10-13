@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #pokemon-list {
@@ -9,6 +9,7 @@ body {
 }
 
 h5 {
+	color: #a1a1a1;
 	text-align: left;
 }
 
@@ -18,77 +19,132 @@ h5 {
 	text-align: center;
 }
 
+.pokemon:hover {
+	outline: 3px solid blue;
+	outline-offset: -5px;
+	border-radius: 10px;
+}
+
 img {
+	max-width: 320px;
 	position: relative;
 	float: left;
 	margin: 5px;
-	background-color: antiquewhite;
+	background-color: #f2f2f2;
+	border-radius: 5px;
 }
 
 /* CSS styles for different types */
-.grass p {
+.grass {
 	background-color: #7ac74c;
 }
 
-.fire p {
+.fire {
 	background-color: #fd7d24;
+	color: #fff;
 }
 
-.normal p {
+.normal {
 	background-color: #a8a77a;
 }
 
-.water p {
+.water {
 	background-color: #4592c4;
+	color: #fff;
 }
 
-.bug p {
+.bug {
 	background-color: #729f3f;
 }
 
-.poison p {
+.poison {
 	background-color: #b97fc9;
+	color: #fff;
 }
 
-.ground p {
+.ground {
 	background-color: #e2bf65;
 }
 
-.electric p {
+.electric {
 	background-color: #eed535;
 }
 
-.fairy p {
+.fairy {
 	background-color: #fdb9e9;
 }
 
-.fighting p {
+.fighting {
 	background-color: #d56723;
+	color: #fff;
 }
 
-.psychic p {
+.psychic {
+	color: #fff;
 	background-color: #f366b9;
 }
 
-.rock p {
+.rock {
 	background-color: #a38c21;
+	color: #fff;
 }
 
-.ghost p {
+.ghost {
 	background-color: #7b62a3;
 }
 
-.ice p {
+.ice {
 	background-color: #96d9d6;
 }
 
-.dragon p {
+.dragon {
 	background-color: #53a4cf;
 }
 
-p {
+.flying {
+	background-color: #87ceeb;
+}
+
+.steel {
+	background-color: #c0c0c0;
+}
+
+span {
+	margin-right: 5px;
 	border-radius: 5px;
 	text-align: center;
 	padding: 3px 5px;
 	max-width: fit-content;
+}
+
+.pokemon {
+	/* Existing styles */
+	position: relative; /* To position the button relative to the .pokemon div */
+}
+
+/* CSS styles for the Add to Team button */
+
+.add-to-team-button {
+	display: none; /* Initially hidden */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #007bff;
+	border-radius: 5px;
+	color: #fff;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+/* Show the button on .pokemon hover */
+.pokemon:hover .add-to-team-button {
+	display: block;
+}
+
+#message {
+	background-color: transparent; /* Set initially to transparent */
+	border-radius: 10px;
+	padding: 10px;
 }
