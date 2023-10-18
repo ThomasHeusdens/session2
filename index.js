@@ -15,7 +15,6 @@ function addPokemonToTeam(pokemon) {
 		messageElement.textContent = result;
 		messageElement.style.backgroundColor = "#88ff00";
 		// Update the team description
-		document.getElementById("team-description").innerHTML = myTeam.describe();
 	} else {
 		// Error
 		messageElement.textContent = result;
@@ -109,21 +108,6 @@ function fetchPokemons() {
 
 function capitalizeWords(str) {
 	return str.replace(/\b\w/g, (char) => char.toUpperCase());
-}
-
-// Add this variable to keep track of the description visibility
-let isDescriptionVisible = false;
-
-// Function to toggle the team description visibility
-function toggleTeamDescription() {
-	const teamDescription = document.getElementById("team-description");
-	isDescriptionVisible = !isDescriptionVisible; // Toggle visibility
-
-	if (isDescriptionVisible) {
-		teamDescription.style.display = "block"; // Display the description
-	} else {
-		teamDescription.style.display = "none"; // Hide the description
-	}
 }
 
 // Initial call to fetch Pokémon data
